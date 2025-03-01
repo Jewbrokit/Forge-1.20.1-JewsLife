@@ -1,6 +1,9 @@
-package net.jewbrokit.jewslife;
+package net.jewbrokit.life;
 
 import com.mojang.logging.LogUtils;
+import net.jewbrokit.life.block.ModBlock;
+import net.jewbrokit.life.item.ModCreativeModeTabs;
+import net.jewbrokit.life.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,16 +17,21 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(JEWSLIFE.MOD_ID)
-public class JEWSLIFE {
+@Mod(LIFE.MOD_ID)
+public class LIFE {
 
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "jewslife";
+    public static final String MOD_ID = "life";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public JEWSLIFE(FMLJavaModLoadingContext context) {
+    public LIFE(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlock.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -32,6 +40,7 @@ public class JEWSLIFE {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
