@@ -1,7 +1,8 @@
 package net.jewbrokit.life;
 
 import com.mojang.logging.LogUtils;
-import net.jewbrokit.life.block.ModBlock;
+import net.jewbrokit.life.block.ModBlocks;
+import net.jewbrokit.life.block.ModSoils;
 import net.jewbrokit.life.item.ModCreativeModeTabs;
 import net.jewbrokit.life.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,7 +32,8 @@ public class LIFE {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
-        ModBlock.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModSoils.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

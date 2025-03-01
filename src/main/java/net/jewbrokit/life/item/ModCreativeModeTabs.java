@@ -1,6 +1,8 @@
 package net.jewbrokit.life.item;
 
 import net.jewbrokit.life.LIFE;
+import net.jewbrokit.life.block.ModBlocks;
+import net.jewbrokit.life.block.ModSoils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,11 +28,14 @@ public class ModCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> LIFE_BLOCKS = CREATIVEMODE_TABS.register( "lifeblocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SILT_GRASS_ITEM.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModSoils.SILT_SOIL.get()))
                     .title(Component.translatable("creativetab.lifeblocks"))
                     .displayItems((pParameters, pOutput) -> {
 
-                        pOutput.accept(ModItems.SILT_GRASS_ITEM.get());
+                        pOutput.accept(ModSoils.SILT_SOIL.get());
+                        pOutput.accept(ModSoils.CLAY_SOIL.get());
+                        pOutput.accept(ModSoils.LOAMY_SOIL.get());
+                        pOutput.accept(ModSoils.SANDY_SOIL.get());
 
 
 

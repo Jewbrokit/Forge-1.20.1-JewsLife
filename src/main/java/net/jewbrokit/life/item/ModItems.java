@@ -14,9 +14,6 @@ public class ModItems {
     public static final RegistryObject<Item> WHITE_RICE_GRAIN = ITEMS.register("white_rice_grain",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> SILT_GRASS_ITEM = ITEMS.register("silt_grass_block",
-            () -> new Item(new Item.Properties()));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

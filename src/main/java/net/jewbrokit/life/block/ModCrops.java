@@ -1,8 +1,8 @@
 package net.jewbrokit.life.block;
 
-public class ModCrops extends ModBlock {
+public class ModCrops extends ModBlocks {
 
-    public ModCrops(ModBlock block) {
+    public ModCrops(ModBlocks block) {
 
     }
 
