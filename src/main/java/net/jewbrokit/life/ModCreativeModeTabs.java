@@ -1,8 +1,7 @@
-package net.jewbrokit.life.item;
+package net.jewbrokit.life;
 
-import net.jewbrokit.life.LIFE;
-import net.jewbrokit.life.block.ModBlocks;
 import net.jewbrokit.life.block.ModSoils;
+import net.jewbrokit.life.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,6 +32,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
 
                         pOutput.accept(ModSoils.SILT_SOIL.get());
+                        pOutput.accept(ModSoils.PLOWED_SILT_SOIL.get());
                         pOutput.accept(ModSoils.CLAY_SOIL.get());
                         pOutput.accept(ModSoils.LOAMY_SOIL.get());
                         pOutput.accept(ModSoils.SANDY_SOIL.get());

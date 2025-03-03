@@ -3,7 +3,6 @@ package net.jewbrokit.life;
 import com.mojang.logging.LogUtils;
 import net.jewbrokit.life.block.ModBlocks;
 import net.jewbrokit.life.block.ModSoils;
-import net.jewbrokit.life.item.ModCreativeModeTabs;
 import net.jewbrokit.life.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

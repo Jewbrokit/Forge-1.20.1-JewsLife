@@ -1,8 +1,10 @@
 package net.jewbrokit.life.block;
 
 import net.jewbrokit.life.LIFE;
+
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FarmBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,8 +16,11 @@ public class ModSoils extends ModBlocks {
     public static final DeferredRegister<Block> SOILS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, LIFE.MOD_ID);
 
-    public static final RegistryObject<Block> SILT_SOIL = ModSoils.registerBlock("silt_soil",
+    public static final RegistryObject<Block> SILT_SOIL = registerBlock("silt_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+
+    public static final RegistryObject<Block> PLOWED_SILT_SOIL = registerBlock("plowed_silt_soil",
+            () -> new FarmBlock(BlockBehaviour.Properties.copy(Blocks.FARMLAND)));
 
     public static final RegistryObject<Block> CLAY_SOIL = registerBlock("clay_soil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
